@@ -10,18 +10,22 @@ const myTabs: NavbarTabsType[] = [
     {
         label: "Home",
         icon: <SvgIcon component={homeIcon} inheritViewBox />,
+        address: "/home",
     },
     {
         label: "Search",
         icon: <SvgIcon component={searchIcon} inheritViewBox />,
+        address: "/search",
     },
     {
         label: "Historic",
         icon: <SvgIcon component={HistoryIcon} inheritViewBox />,
+        address: "/historic",
     },
     {
         label: "Profile",
         icon: <SvgIcon component={profileIcon} inheritViewBox />,
+        address: "/profile",
     },
 ];
 

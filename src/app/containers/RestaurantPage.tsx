@@ -3,11 +3,14 @@ import { Category as CategoryEnum } from "@core/enums";
 import IRestaurant from "@core/interfaces/IRestaurant";
 import IDish from "@core/interfaces/IDish";
 import { baseUrl } from "@core/constants";
-import { Stack, Grid } from "@mui/material";
+import { Container, Fab, Grid2 as Grid, Stack } from "@mui/material";
+
 import RestaurantCard from "../components/cards/RestaurantCard";
 import CategoryTabs from "../components/tabs/CategoryTabs";
 import DishCard from "../components/cards/DishCard";
 import CardDetail from "../components/cards/CardDetail";
+import { Await, useLoaderData, useNavigate } from "react-router-dom";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 type RestaurantCardDetailProps = {
     logo: string;
@@ -35,7 +38,7 @@ const RestaurantCardDetail = ({
     workTime,
     description,
 }: RestaurantCardDetailProps) => (
-    <Grid item>
+    <Grid>
         <CardDetail
             logo={`${baseUrl}${logo}`}
             name={name}
@@ -52,12 +55,13 @@ const RestaurantCardDetail = ({
     </Grid>
 );
 
-const renderCards = ({ name, image, price }: IDish) => (
+const renderCards = ({ name, image, price, id }: IDish) => (
     <DishCard
         name={name}
         image={`${baseUrl}${image}`}
         price={price}
         key={name}
+        id={id}
     />
 );
 const selectDishesByCategory = (
@@ -78,42 +82,78 @@ const RestaurantCards = ({
     dishes,
     detail,
 }: RestaurantCardsProps) => {
+    const navigate = useNavigate();
     return (
-        <Grid container justifyContent="center" gap={4}>
-            {detail}
-            <Grid item>
-                {categoryTabs}
-                <Stack
-                    direction="row"
-                    gap={2}
+        <Container
+            maxWidth="md"
+            sx={{
+                p: 3,
+            }}
+        >
+            <Grid
+                container
+                justifyContent="center"
+                gap={4}
+                sx={{
+                    position: "relative",
+                }}
+            >
+                {detail}
+                <Grid>
+                    {categoryTabs}
+                    <Stack
+                        direction="row"
+                        gap={2}
+                        sx={{
+                            mt: 3,
+                        }}
+                    >
+                        {dishes.map(renderCards)}
+                    </Stack>
+                </Grid>
+                <Fab
+                    aria-label="Return"
                     sx={{
-                        mt: 3,
+                        position: "absolute",
+                        left: 0,
+                        top: -16,
+                        bgcolor: "#fff",
+                        boxShadow: "none",
                     }}
+                    onClick={() => navigate(-1)}
                 >
-                    {dishes.map(renderCards)}
-                </Stack>
+                    <ArrowBackIosNewIcon />
+                </Fab>
             </Grid>
-        </Grid>
+        </Container>
     );
 };
 
-const RestaurantPage = ({
-    restaurant: { dishes, ...cardDetailProps },
-}: IRestaurant) => {
+const RestaurantPage = () => {
+    const restaurant = useLoaderData() as IRestaurant;
     const [selectedCategory, setSelectedCategory] = useState<CategoryEnum>(
         CategoryEnum.All
     );
-
     return (
-        <RestaurantCards
-            detail={<RestaurantCardDetail {...cardDetailProps} />}
-            categoryTabs={
-                <CategoryTabs
-                    setSelectedCategory={setSelectedCategory}
-                    selectedCategory={selectedCategory}
-                />
-            }
-            dishes={selectDishesByCategory(selectedCategory, dishes)}
+        <Await
+            resolve={restaurant}
+            children={({ dishes, ...cardDetailProps }) => (
+                <>
+                    <RestaurantCards
+                        detail={<RestaurantCardDetail {...cardDetailProps} />}
+                        categoryTabs={
+                            <CategoryTabs
+                                setSelectedCategory={setSelectedCategory}
+                                selectedCategory={selectedCategory}
+                            />
+                        }
+                        dishes={selectDishesByCategory(
+                            selectedCategory,
+                            dishes
+                        )}
+                    />
+                </>
+            )}
         />
     );
 };

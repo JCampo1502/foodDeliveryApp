@@ -68,6 +68,7 @@
             },
             "dishes": [
                 {
+                    "id": "ed1c2f92-3f7b-4b5f-bd54-7c6bc7a798bc",
                     "image": "/images/dishes/salad-1.png",
                     "timing": "15:20min",
                     "deliveryMinCost": 5,
@@ -75,26 +76,45 @@
                     "name": "Bolognese salad",
                     "description": "Una ensalada Bolognese llena de sabor con tomates frescos, grano y hojas de lechuga, perfecta para una comida ligera y saludable.",
                     "price": 14.45,
-                    "additionalIngredients": {
-                        "Tomatoes": 2,
-                        "Grain": 1,
-                        "Lettuce leaf": 1
-                    },
+                    "additionalIngredients": [
+                        {
+                            "label": "Tomatoes",
+                            "value": 2
+                        },
+                        {
+                            "label": "Grain",
+                            "value": 1
+                        },
+                        {
+                            "label": "Lettuce leaf",
+                            "value": 1
+                        }
+                    ],
                     "categories": ["Salad"]
                 },
                 {
-                    "image": "/images/dishes/pizza-1.png",
+                    "id": "a8f9a146-2d8b-45f0-bb9f-dbd9371e1e5e",
+                    "image": "/images/dishes/pizza-1.jpeg",
                     "timing": "45:00min",
                     "deliveryMinCost": 7,
                     "deliveryMaxCost": 20,
                     "name": "Meat pizza",
                     "description": "Una pizza cargada de carne y queso, perfecta para aquellos que buscan una comida rápida y deliciosa.",
                     "price": 29,
-                    "additionalIngredients": {
-                        "Tomatoes": 4,
-                        "Pepperoni": 5,
-                        "Cheese": 5
-                    },
+                    "additionalIngredients": [
+                        {
+                            "label": "Tomatoes",
+                            "value": 4
+                        },
+                        {
+                            "label": "Pepperoni",
+                            "value": 5
+                        },
+                        {
+                            "label": "Cheese",
+                            "value": 5
+                        }
+                    ],
                     "categories": ["FastFood"]
                 }
             ]
@@ -112,34 +132,54 @@
             },
             "dishes": [
                 {
-                    "image": "/images/dishes/salad-2.png",
+                    "id": "5e2a3d87-4496-4635-a85f-b0a5b1a5a1cf",
+                    "image": "/images/dishes/salad-2.jpeg",
                     "timing": "90min",
                     "deliveryMinCost": 4,
                     "deliveryMaxCost": 9,
                     "name": "Caesar Salad",
                     "description": "Una clásica ensalada César con lechuga romana crujiente, parmesano y crutones, ideal para los amantes de la comida italiana.",
                     "price": 12.5,
-                    "additionalIngredients": {
-                        "Croutons": 2,
-                        "Parmesan": 3,
-                        "Caesar dressing": 1
-                    },
+                    "additionalIngredients": [
+                        {
+                            "label": "Croutons",
+                            "value": 2
+                        },
+                        {
+                            "label": "Parmesan",
+                            "value": 3
+                        },
+                        {
+                            "label": "Caesar dressing",
+                            "value": 1
+                        }
+                    ],
                     "categories": ["Salad"]
                 },
                 {
-                    "image": "/images/dishes/pizza-2.png",
-                    "timing": "15:20min",
-                    "deliveryMinCost": 5,
-                    "deliveryMaxCost": 20,
-                    "name": "Margherita Pizza",
-                    "description": "Una pizza Margherita simple pero deliciosa, con tomate fresco, mozzarella y albahaca, un clásico italiano.",
-                    "price": 18.0,
-                    "additionalIngredients": {
-                        "Mozzarella": 4,
-                        "Tomato": 3,
-                        "Basil": 2
-                    },
-                    "categories": ["Pizza"]
+                    "id": "1b1b92a5-42f1-4a32-83ea-68c374f8d4ef",
+                    "image": "/images/dishes/salad-3.jpeg",
+                    "timing": "17:40min",
+                    "deliveryMinCost": 8,
+                    "deliveryMaxCost": 10,
+                    "name": "Greek Salad",
+                    "description": "Una refrescante ensalada griega con pepino, tomate, aceitunas y queso feta, ideal para una comida ligera y saludable.",
+                    "price": 13.75,
+                    "additionalIngredients": [
+                        {
+                            "label": "Olives",
+                            "value": 2
+                        },
+                        {
+                            "label": "Feta cheese",
+                            "value": 3
+                        },
+                        {
+                            "label": "Cucumber",
+                            "value": 1
+                        }
+                    ],
+                    "categories": ["Salad"]
                 }
             ]
         },
@@ -156,34 +196,54 @@
             },
             "dishes": [
                 {
-                    "image": "/images/dishes/salad-3.png",
-                    "timing": "17:40min",
-                    "deliveryMinCost": 8,
-                    "deliveryMaxCost": 10,
-                    "name": "Greek Salad",
-                    "description": "Una refrescante ensalada griega con pepino, tomate, aceitunas y queso feta, ideal para una comida ligera y saludable.",
-                    "price": 13.75,
-                    "additionalIngredients": {
-                        "Olives": 2,
-                        "Feta cheese": 3,
-                        "Cucumber": 1
-                    },
-                    "categories": ["Salad"]
-                },
-                {
-                    "image": "/images/dishes/pizza-3.png",
+                    "id": "f8d5c6c2-5c7f-4781-b62e-25b1f3e06c83",
+                    "image": "/images/dishes/pizza-3.jpeg",
                     "timing": "15min",
                     "deliveryMinCost": 15,
                     "deliveryMaxCost": 20,
                     "name": "Vegetarian Pizza",
                     "description": "Una pizza cargada de una variedad de verduras frescas y queso, perfecta para los amantes de la comida vegetariana.",
                     "price": 20.5,
-                    "additionalIngredients": {
-                        "Bell peppers": 3,
-                        "Onions": 2,
-                        "Mushrooms": 3
-                    },
+                    "additionalIngredients": [
+                        {
+                            "label": "Bell peppers",
+                            "value": 3
+                        },
+                        {
+                            "label": "Onions",
+                            "value": 2
+                        },
+                        {
+                            "label": "Mushrooms",
+                            "value": 3
+                        }
+                    ],
                     "categories": ["Pizza", "FastFood"]
+                },
+                {
+                    "id": "d8e4d7e5-3c5f-40fa-94c5-b71b59851c87",
+                    "image": "/images/dishes/pizza-2.jpeg",
+                    "timing": "15:20min",
+                    "deliveryMinCost": 5,
+                    "deliveryMaxCost": 20,
+                    "name": "Margherita Pizza",
+                    "description": "Una pizza Margherita simple pero deliciosa, con tomate fresco, mozzarella y albahaca, un clásico italiano.",
+                    "price": 18.0,
+                    "additionalIngredients": [
+                        {
+                            "label": "Mozzarella",
+                            "value": 4
+                        },
+                        {
+                            "label": "Tomato",
+                            "value": 3
+                        },
+                        {
+                            "label": "Basil",
+                            "value": 2
+                        }
+                    ],
+                    "categories": ["Pizza"]
                 }
             ]
         },
@@ -200,78 +260,54 @@
             },
             "dishes": [
                 {
-                    "image": "/images/dishes/salad-4.png",
+                    "id": "d1f8f35b-3d86-48e7-b13e-d8f0dfad5b0c",
+                    "image": "/images/dishes/salad-4.jpeg",
                     "timing": "15:20min",
                     "deliveryMinCost": 5,
                     "deliveryMaxCost": 20,
                     "name": "Steak Salad",
                     "description": "Una ensalada contundente con filete a la parrilla, mezcla de verdes y un glaseado balsámico, perfecta para una comida satisfactoria.",
                     "price": 19.95,
-                    "additionalIngredients": {
-                        "Steak": 3,
-                        "Mixed greens": 2,
-                        "Balsamic glaze": 1
-                    },
+                    "additionalIngredients": [
+                        {
+                            "label": "Steak",
+                            "value": 3
+                        },
+                        {
+                            "label": "Greens mix",
+                            "value": 2
+                        },
+                        {
+                            "label": "Balsamic glaze",
+                            "value": 1
+                        }
+                    ],
                     "categories": ["Salad"]
                 },
                 {
-                    "image": "/images/dishes/pizza-4.png",
-                    "timing": "15:20min",
-                    "deliveryMinCost": 15,
-                    "deliveryMaxCost": 40,
+                    "id": "9f1cfc8b-4d4d-46cb-9bf2-20c314fc32b9",
+                    "image": "/images/dishes/pizza-4.jpeg",
+                    "timing": "30min",
+                    "deliveryMinCost": 7,
+                    "deliveryMaxCost": 20,
                     "name": "BBQ Chicken Pizza",
-                    "description": "Una pizza ahumada con salsa BBQ, pollo y cebollas, ideal para los amantes de la comida a la parrilla.",
-                    "price": 22.0,
-                    "additionalIngredients": {
-                        "BBQ sauce": 2,
-                        "Chicken": 4,
-                        "Onions": 2
-                    },
-                    "categories": ["Pizza"]
-                }
-            ]
-        },
-        {
-            "id": "2fbb2a3e-3629-4b64-bdd4-2bb5f5a22c1d",
-            "logo": "/images/logos/Logo-1.png",
-            "banner": "/images/restaurants/restaurant-img-5.png",
-            "name": "Ocean's Delight",
-            "description": "Ocean's Delight es el lugar ideal para los amantes del mar, con especialidades de mariscos frescos, ensaladas ligeras y pizzas únicas con ingredientes del océano.",
-            "stars": 4,
-            "workTime": {
-                "open": "10:00 AM",
-                "close": "09:00 PM"
-            },
-            "dishes": [
-                {
-                    "image": "/images/dishes/salad-5.png",
-                    "timing": "1h",
-                    "deliveryMinCost": 15,
-                    "deliveryMaxCost": 90,
-                    "name": "Seafood Salad",
-                    "description": "Una ensalada ligera con camarones, cangrejo y mezcla de verdes, perfecta para los amantes de los mariscos.",
-                    "price": 21.0,
-                    "additionalIngredients": {
-                        "Shrimp": 3,
-                        "Crab": 2,
-                        "Mixed greens": 2
-                    },
-                    "categories": ["Salad"]
-                },
-                {
-                    "image": "/images/dishes/pizza-5.png",
-                    "timing": "45:00min",
-                    "deliveryMinCost": 4,
-                    "deliveryMaxCost": 5,
-                    "name": "Seafood Pizza",
-                    "description": "Una pizza única con una mezcla de mariscos frescos, perfecta para aquellos que buscan un sabor diferente.",
-                    "price": 26.0,
-                    "additionalIngredients": {
-                        "Shrimp": 3,
-                        "Squid": 2,
-                        "Mussels": 2
-                    },
-                    "categories": ["Pizza"]
+                    "description": "Una pizza con pollo a la barbacoa, queso cheddar y cebollas, con un toque de salsa BBQ para un sabor ahumado y dulce.",
+                    "price": 22,
+                    "additionalIngredients": [
+                        {
+                            "label": "Chicken",
+                            "value": 4
+                        },
+                        {
+                            "label": "Cheddar cheese",
+                            "value": 3
+                        },
+                        {
+                            "label": "BBQ sauce",
+                            "value": 2
+                        }
+                    ],
+                    "categories": ["Pizza", "FastFood"]
                 }
             ]
         }

@@ -1,8 +1,9 @@
 import IRestaurant from "@core/interfaces/IRestaurant";
 import { baseUrl } from "@core/constants";
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import CardSkeleton from "../components/cards/CardSkeleton";
 import RestaurantCard from "../components/cards/RestaurantCard";
+import { useNavigate } from "react-router-dom";
 
 type CardContainerProps = {
     restaurants: IRestaurant[];
@@ -16,20 +17,29 @@ const LoadRestaurantCards = () => (
     </>
 );
 
-const ShowRestaurants = ({ restaurants }: CardContainerProps) =>
-    restaurants.length === 0 ? (
+const ShowRestaurants = ({ restaurants }: CardContainerProps) => {
+    const navigate = useNavigate();
+    return restaurants.length === 0 ? (
         <LoadRestaurantCards />
     ) : (
         restaurants.map((restaurant) => (
-            <RestaurantCard
-                {...{
-                    ...restaurant,
-                    banner: baseUrl + restaurant.banner,
-                }}
+            <Box
+                onClick={() => navigate(`/restaurant/${restaurant.id}`)}
                 key={restaurant.id}
-            />
+                sx={{
+                    cursor: "pointer",
+                }}
+            >
+                <RestaurantCard
+                    {...{
+                        ...restaurant,
+                        banner: baseUrl + restaurant.banner,
+                    }}
+                />
+            </Box>
         ))
     );
+};
 
 const CardContainer = ({ restaurants }: CardContainerProps) => {
     return (

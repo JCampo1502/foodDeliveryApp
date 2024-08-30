@@ -4,11 +4,12 @@ import CardsContainer from "./CardsContainer";
 import CategoryTabs from "../components/tabs/CategoryTabs";
 import PromoTabs from "../components/tabs/PromoTabs";
 import { Category as CategoryEnum } from "@core/enums";
+
+import IRestaurant from "../../core/interfaces/IRestaurant";
 import {
     getRestaurant,
     getRestaurantByCategory,
-} from "@infrastructure/services/restaurant/get";
-import IRestaurant from "../../core/interfaces/IRestaurant";
+} from "@/infrastructure/services/restaurant/get";
 
 type HomeTabsProps = {
     restaurantCategories: JSX.Element;

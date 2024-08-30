@@ -1,6 +1,7 @@
 export type NavbarTabsType = {
     label: string;
     icon: JSX.Element;
+    address: string;
 };
 
 export type DishesType = {

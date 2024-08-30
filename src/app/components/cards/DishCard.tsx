@@ -1,16 +1,18 @@
 import { Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import { useNavigate } from "react-router-dom";
 
 type DishCardProps = {
     name: string;
     image: string;
     price: number;
+    id: string;
 };
 
 type DishCardContentProps = Pick<DishCardProps, "name" | "price">;
 
 const DishCardPrice = ({ price }: { price: number }) => (
-    <Stack direction="row" alignItems="center">
+    <Stack direction="row" alignItems="center" component="em">
         <AttachMoneyIcon />
         <Typography
             component="em"
@@ -46,7 +48,8 @@ const DishCardContent = ({ name, price }: DishCardContentProps) => (
     </CardContent>
 );
 
-const DishCard = ({ name, image, price }: DishCardProps) => {
+const DishCard = ({ name, image, price, id }: DishCardProps) => {
+    const navigate = useNavigate();
     return (
         <Card
             sx={{
@@ -56,8 +59,10 @@ const DishCard = ({ name, image, price }: DishCardProps) => {
                 flexDirection: "column",
                 alignItems: "center",
                 rowGap: 1,
+                cursor: "pointer",
             }}
             elevation={1}
+            onClick={() => navigate(`/dish/${id}`)}
         >
             <CardMedia
                 component="img"

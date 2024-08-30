@@ -23,7 +23,9 @@ export const getRestaurantByCategory = async (category: Category) => {
     return data;
 };
 
-export const getRestaurantById = async (id: string) => {
+export const getRestaurantById = async (
+    id: string
+): Promise<IRestaurant | null> => {
     try {
         const { data } = await axiosRestaurantInstance.get<IRestaurant>(
             `/${id}`
@@ -31,6 +33,6 @@ export const getRestaurantById = async (id: string) => {
         return data;
     } catch (error) {
         console.error(error);
-        return [];
+        return null;
     }
 };

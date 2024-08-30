@@ -1,18 +1,21 @@
 import { useState } from "react";
 import type { NavbarTabsType } from "@core/types";
 import { Tab, tabClasses, Tabs, tabsClasses } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 type NavbarTabsProps = {
     tabs: NavbarTabsType[];
 };
 
-const renderTabs = ({ label, icon }: NavbarTabsType) => (
+const renderTabs = ({ label, icon, address }: NavbarTabsType) => (
     <Tab
         aria-label={label}
         icon={icon}
         color="primary"
         key={label}
         disableRipple
+        component={NavLink}
+        to={address}
     />
 );
 
