@@ -1,0 +1,279 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Javier David",
+            "lastName": "Campo Suarez",
+            "email": "jcampo1502@gmail.com",
+            "birthDay": "07/15/2002",
+            "phoneNumber": 3147309878,
+            "password": "123",
+            "location": [
+                {
+                    "address": "kr 1f # 72-77 Gaitan",
+                    "city": "cali",
+                    "country": "colombia"
+                },
+                {
+                    "address": "Kr 2D 79-68 Petecuy",
+                    "city": "cali",
+                    "country": "colombia"
+                }
+            ],
+            "payment": [
+                {
+                    "name": "colpatria",
+                    "number": "1234 1234 1234 12345",
+                    "expires": "07/15/3002",
+                    "cvv": "1234"
+                },
+                {
+                    "name": "Bancolombia",
+                    "value": "5678 5678 5678 56789",
+                    "expires": "07/15/3002",
+                    "cvv": "1234"
+                }
+            ],
+            "orders": [
+                {
+                    "date": "08/26/2024",
+                    "constOfDelivery": 8.97,
+                    "dishes": [
+                        {
+                            "name": "BBQ Chicken Pizza",
+                            "price": 22.0,
+                            "amount": 2
+                        },
+                        {
+                            "name": "Caesar Salad",
+                            "price": 12.5,
+                            "amount": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "restaurants": [
+        {
+            "id": "b1e5d6f9-96b6-4c7c-a59a-5d017b3a6478",
+            "logo": "/images/logos/Logo-1.png",
+            "banner": "/images/restaurants/restaurant-img-1.png",
+            "name": "Pardes Restaurant",
+            "description": "Pardes Restaurant ofrece una experiencia culinaria moderna, destacándose por sus frescas y deliciosas ensaladas y opciones rápidas de comida como pizzas. Ven y disfruta de una combinación perfecta de sabor y tradición.",
+            "stars": 4,
+            "workTime": {
+                "open": "08:00 AM",
+                "close": "10:00 PM"
+            },
+            "dishes": [
+                {
+                    "image": "/images/dishes/salad-1.png",
+                    "timing": "15:20min",
+                    "deliveryMinCost": 5,
+                    "deliveryMaxCost": 20,
+                    "name": "Bolognese salad",
+                    "description": "Una ensalada Bolognese llena de sabor con tomates frescos, grano y hojas de lechuga, perfecta para una comida ligera y saludable.",
+                    "price": 14.45,
+                    "additionalIngredients": {
+                        "Tomatoes": 2,
+                        "Grain": 1,
+                        "Lettuce leaf": 1
+                    },
+                    "categories": ["Salad"]
+                },
+                {
+                    "image": "/images/dishes/pizza-1.png",
+                    "timing": "45:00min",
+                    "deliveryMinCost": 7,
+                    "deliveryMaxCost": 20,
+                    "name": "Meat pizza",
+                    "description": "Una pizza cargada de carne y queso, perfecta para aquellos que buscan una comida rápida y deliciosa.",
+                    "price": 29,
+                    "additionalIngredients": {
+                        "Tomatoes": 4,
+                        "Pepperoni": 5,
+                        "Cheese": 5
+                    },
+                    "categories": ["FastFood"]
+                }
+            ]
+        },
+        {
+            "id": "a7d23b1c-803f-45b2-b5f9-09b3d3c6854e",
+            "logo": "/images/logos/Logo-2.png",
+            "banner": "/images/restaurants/restaurant-img-2.png",
+            "name": "Bella Italia",
+            "description": "Bella Italia es el lugar perfecto para los amantes de la cocina italiana, ofreciendo una variedad de ensaladas frescas y pizzas tradicionales que te transportarán a Italia.",
+            "stars": 5,
+            "workTime": {
+                "open": "11:00 AM",
+                "close": "06:00 PM"
+            },
+            "dishes": [
+                {
+                    "image": "/images/dishes/salad-2.png",
+                    "timing": "90min",
+                    "deliveryMinCost": 4,
+                    "deliveryMaxCost": 9,
+                    "name": "Caesar Salad",
+                    "description": "Una clásica ensalada César con lechuga romana crujiente, parmesano y crutones, ideal para los amantes de la comida italiana.",
+                    "price": 12.5,
+                    "additionalIngredients": {
+                        "Croutons": 2,
+                        "Parmesan": 3,
+                        "Caesar dressing": 1
+                    },
+                    "categories": ["Salad"]
+                },
+                {
+                    "image": "/images/dishes/pizza-2.png",
+                    "timing": "15:20min",
+                    "deliveryMinCost": 5,
+                    "deliveryMaxCost": 20,
+                    "name": "Margherita Pizza",
+                    "description": "Una pizza Margherita simple pero deliciosa, con tomate fresco, mozzarella y albahaca, un clásico italiano.",
+                    "price": 18.0,
+                    "additionalIngredients": {
+                        "Mozzarella": 4,
+                        "Tomato": 3,
+                        "Basil": 2
+                    },
+                    "categories": ["Pizza"]
+                }
+            ]
+        },
+        {
+            "id": "8fc5e836-87e6-4fa6-a829-0c76f8268911",
+            "logo": "/images/logos/Logo-1.png",
+            "banner": "/images/restaurants/restaurant-img-3.png",
+            "name": "Green Garden",
+            "description": "Green Garden es tu destino para opciones vegetarianas y veganas frescas y saludables. Disfruta de ensaladas nutritivas y pizzas vegetarianas llenas de sabor.",
+            "stars": 4,
+            "workTime": {
+                "open": "08:00 AM",
+                "close": "10:00 PM"
+            },
+            "dishes": [
+                {
+                    "image": "/images/dishes/salad-3.png",
+                    "timing": "17:40min",
+                    "deliveryMinCost": 8,
+                    "deliveryMaxCost": 10,
+                    "name": "Greek Salad",
+                    "description": "Una refrescante ensalada griega con pepino, tomate, aceitunas y queso feta, ideal para una comida ligera y saludable.",
+                    "price": 13.75,
+                    "additionalIngredients": {
+                        "Olives": 2,
+                        "Feta cheese": 3,
+                        "Cucumber": 1
+                    },
+                    "categories": ["Salad"]
+                },
+                {
+                    "image": "/images/dishes/pizza-3.png",
+                    "timing": "15min",
+                    "deliveryMinCost": 15,
+                    "deliveryMaxCost": 20,
+                    "name": "Vegetarian Pizza",
+                    "description": "Una pizza cargada de una variedad de verduras frescas y queso, perfecta para los amantes de la comida vegetariana.",
+                    "price": 20.5,
+                    "additionalIngredients": {
+                        "Bell peppers": 3,
+                        "Onions": 2,
+                        "Mushrooms": 3
+                    },
+                    "categories": ["Pizza", "FastFood"]
+                }
+            ]
+        },
+        {
+            "id": "6df4c1f9-88a3-4f3b-a9fc-6a1f3d40ad22",
+            "logo": "/images/logos/Logo-2.png",
+            "banner": "/images/restaurants/restaurant-img-4.png",
+            "name": "The Grill House",
+            "description": "The Grill House es conocido por sus carnes y filetes a la parrilla, acompañados de ensaladas contundentes y pizzas ahumadas, ideales para los amantes de la carne.",
+            "stars": 5,
+            "workTime": {
+                "open": "12:00 PM",
+                "close": "10:00 PM"
+            },
+            "dishes": [
+                {
+                    "image": "/images/dishes/salad-4.png",
+                    "timing": "15:20min",
+                    "deliveryMinCost": 5,
+                    "deliveryMaxCost": 20,
+                    "name": "Steak Salad",
+                    "description": "Una ensalada contundente con filete a la parrilla, mezcla de verdes y un glaseado balsámico, perfecta para una comida satisfactoria.",
+                    "price": 19.95,
+                    "additionalIngredients": {
+                        "Steak": 3,
+                        "Mixed greens": 2,
+                        "Balsamic glaze": 1
+                    },
+                    "categories": ["Salad"]
+                },
+                {
+                    "image": "/images/dishes/pizza-4.png",
+                    "timing": "15:20min",
+                    "deliveryMinCost": 15,
+                    "deliveryMaxCost": 40,
+                    "name": "BBQ Chicken Pizza",
+                    "description": "Una pizza ahumada con salsa BBQ, pollo y cebollas, ideal para los amantes de la comida a la parrilla.",
+                    "price": 22.0,
+                    "additionalIngredients": {
+                        "BBQ sauce": 2,
+                        "Chicken": 4,
+                        "Onions": 2
+                    },
+                    "categories": ["Pizza"]
+                }
+            ]
+        },
+        {
+            "id": "2fbb2a3e-3629-4b64-bdd4-2bb5f5a22c1d",
+            "logo": "/images/logos/Logo-1.png",
+            "banner": "/images/restaurants/restaurant-img-5.png",
+            "name": "Ocean's Delight",
+            "description": "Ocean's Delight es el lugar ideal para los amantes del mar, con especialidades de mariscos frescos, ensaladas ligeras y pizzas únicas con ingredientes del océano.",
+            "stars": 4,
+            "workTime": {
+                "open": "10:00 AM",
+                "close": "09:00 PM"
+            },
+            "dishes": [
+                {
+                    "image": "/images/dishes/salad-5.png",
+                    "timing": "1h",
+                    "deliveryMinCost": 15,
+                    "deliveryMaxCost": 90,
+                    "name": "Seafood Salad",
+                    "description": "Una ensalada ligera con camarones, cangrejo y mezcla de verdes, perfecta para los amantes de los mariscos.",
+                    "price": 21.0,
+                    "additionalIngredients": {
+                        "Shrimp": 3,
+                        "Crab": 2,
+                        "Mixed greens": 2
+                    },
+                    "categories": ["Salad"]
+                },
+                {
+                    "image": "/images/dishes/pizza-5.png",
+                    "timing": "45:00min",
+                    "deliveryMinCost": 4,
+                    "deliveryMaxCost": 5,
+                    "name": "Seafood Pizza",
+                    "description": "Una pizza única con una mezcla de mariscos frescos, perfecta para aquellos que buscan un sabor diferente.",
+                    "price": 26.0,
+                    "additionalIngredients": {
+                        "Shrimp": 3,
+                        "Squid": 2,
+                        "Mussels": 2
+                    },
+                    "categories": ["Pizza"]
+                }
+            ]
+        }
+    ]
+}
