@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Stack, Typography } from "@mui/material";
-import CardsContainer from "./CardsContainer";
+import CardsContainer from "../containers/CardsContainer";
 import CategoryTabs from "../components/tabs/CategoryTabs";
 import PromoTabs from "../components/tabs/PromoTabs";
 import { Category as CategoryEnum } from "@core/enums";

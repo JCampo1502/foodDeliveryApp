@@ -5,11 +5,12 @@ import {
     redirect,
 } from "react-router-dom";
 import BaseContainer from "./app/containers/BaseContainer";
-import HomePage from "./app/containers/HomePage";
-import RestaurantPage from "./app/containers/RestaurantPage";
+import HomePage from "./app/pages/HomePage";
+import RestaurantPage from "./app/pages/RestaurantPage";
 import { getRestaurantById } from "./infrastructure/services/restaurant/get";
-import DishPage from "./app/containers/DishPage";
+import DishPage from "./app/pages/DishPage";
 import { getDishById } from "./infrastructure/services/dish/get";
+import SearchPage from "./app/pages/SearchPage";
 
 type LoaderProps = {
     params: Params;
@@ -61,7 +62,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "search",
-                element: <>Hello search</>,
+                element: <SearchPage />,
             },
             {
                 path: "historic",

@@ -1,26 +1,16 @@
 import { useState } from "react";
 import type { NavbarTabsType } from "@core/types";
 import { Tab, tabClasses, Tabs, tabsClasses } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 type NavbarTabsProps = {
     tabs: NavbarTabsType[];
 };
 
-const renderTabs = ({ label, icon, address }: NavbarTabsType) => (
-    <Tab
-        aria-label={label}
-        icon={icon}
-        color="primary"
-        key={label}
-        disableRipple
-        component={NavLink}
-        to={address}
-    />
-);
-
 const NavbarTabs = ({ tabs }: NavbarTabsProps) => {
-    const [value, setValue] = useState(0);
+    const location = useLocation();
+    const val = tabs.findIndex((tab) => tab.address === location.pathname);
+    const [value, setValue] = useState(val);
     const handleChange = (_: React.SyntheticEvent, val: number) =>
         setValue(val);
 
@@ -55,7 +45,17 @@ const NavbarTabs = ({ tabs }: NavbarTabsProps) => {
                 },
             }}
         >
-            {tabs.map(renderTabs)}
+            {tabs.map(({ label, icon, address }) => (
+                <Tab
+                    aria-label={label}
+                    icon={icon}
+                    color="primary"
+                    key={label}
+                    disableRipple
+                    component={NavLink}
+                    to={address}
+                />
+            ))}
         </Tabs>
     );
 };
